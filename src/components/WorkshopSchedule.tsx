@@ -1,4 +1,3 @@
-
 import { Card } from "@/components/ui/card";
 
 const WorkshopSchedule = () => {
@@ -52,7 +51,7 @@ const WorkshopSchedule = () => {
           </p>
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-8 animate-fade-in">
             <p className="text-blue-800 font-medium">
-              📅 Specific dates, times, and locations will be sent to you via your contact information after you sign up!
+              📅 Specific dates, times, and locations will be sent to you via your contact information some time after you sign up!
             </p>
           </div>
         </div>

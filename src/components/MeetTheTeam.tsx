@@ -1,4 +1,3 @@
-
 import { Card } from "@/components/ui/card";
 
 const MeetTheTeam = () => {
@@ -10,21 +9,21 @@ const MeetTheTeam = () => {
       gradient: "from-blue-500 to-cyan-500"
     },
     {
-      name: "Harshad",
+      name: "Harshad Amalan",
       expertise: "Reselling & Product Trends", 
       bio: "Harshad is a successful reseller who's placed at the state level in BPA competitions. He teaches how to spot product trends and flip items for profit.",
       gradient: "from-green-500 to-emerald-500"
     },
     {
-      name: "Neil", 
+      name: "Neil Kaila", 
       expertise: "Stock Analysis & Investing",
       bio: "Neil is a student investor who competed in the Wharton Investment Competition. He's passionate about teaching students how to research, analyze, and confidently invest in stocks.",
       gradient: "from-purple-500 to-violet-500"
     },
     {
-      name: "Yashas",
+      name: "Yashas Singh",
       expertise: "Economics & Digital Assets",
-      bio: "Yashas taught AP Econ to his peers and made over $1,000 trading NFTs. He focuses on helping students understand crypto, digital assets, and economic decision-making.", 
+      bio: "Yashas taught AP Econ to his peers and made over $1,000 trading NFTs. He focuses on helping students understand crypto digital assets, and economic decision-making.", 
       gradient: "from-orange-500 to-red-500"
     }
   ];
