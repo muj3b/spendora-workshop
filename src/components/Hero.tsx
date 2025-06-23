@@ -4,7 +4,7 @@ import { ChartLine, Coins, Store } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 flex items-center overflow-hidden">
+    <section className="relative min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 flex items-center overflow-hidden transition-colors duration-300">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 opacity-10 animate-[float_6s_ease-in-out_infinite]">
@@ -27,9 +27,9 @@ const Hero = () => {
             Level Up Your Money Skills
           </h1>
           
-          <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in transform transition-all duration-1000" style={{ animationDelay: '0.2s' }}>
+          <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in transform transition-all duration-1000" style={{ animationDelay: '0.2s' }}>
             A free 5-day hands-on workshop designed by high school students to teach 
-            real-world financial skills to middle schoolers.
+            real-world financial skills to students grades 2-10.
           </p>
 
           <div className="space-y-4 animate-fade-in transform transition-all duration-1000" style={{ animationDelay: '0.4s' }}>
@@ -41,35 +41,35 @@ const Hero = () => {
               Sign Up Now - It's Free! 🚀
             </Button>
             
-            <p className="text-sm text-gray-600 font-medium animate-fade-in" style={{ animationDelay: '0.6s' }}>
+            <p className="text-sm text-gray-600 dark:text-gray-400 font-medium animate-fade-in" style={{ animationDelay: '0.6s' }}>
               All supplies included • Hosted at local libraries & camps
             </p>
           </div>
 
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto">
             <div className="text-center animate-fade-in transform transition-all duration-700 hover:scale-110" style={{ animationDelay: '0.8s' }}>
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3 transition-all duration-300 hover:bg-blue-200 hover:scale-110">
-                <ChartLine className="w-8 h-8 text-blue-600 transition-transform duration-300 hover:rotate-12" />
+              <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-3 transition-all duration-300 hover:bg-blue-200 dark:hover:bg-blue-800 hover:scale-110">
+                <ChartLine className="w-8 h-8 text-blue-600 dark:text-blue-400 transition-transform duration-300 hover:rotate-12" />
               </div>
-              <p className="text-sm font-semibold text-gray-700">Stock Markets</p>
+              <p className="text-sm font-semibold text-gray-700 dark:text-gray-300">Stock Markets</p>
             </div>
             <div className="text-center animate-fade-in transform transition-all duration-700 hover:scale-110" style={{ animationDelay: '1s' }}>
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3 transition-all duration-300 hover:bg-green-200 hover:scale-110">
-                <Coins className="w-8 h-8 text-green-600 transition-transform duration-300 hover:rotate-12" />
+              <div className="w-16 h-16 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mx-auto mb-3 transition-all duration-300 hover:bg-green-200 dark:hover:bg-green-800 hover:scale-110">
+                <Coins className="w-8 h-8 text-green-600 dark:text-green-400 transition-transform duration-300 hover:rotate-12" />
               </div>
-              <p className="text-sm font-semibold text-gray-700">Budgeting</p>
+              <p className="text-sm font-semibold text-gray-700 dark:text-gray-300">Budgeting</p>
             </div>
             <div className="text-center animate-fade-in transform transition-all duration-700 hover:scale-110" style={{ animationDelay: '1.2s' }}>
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3 transition-all duration-300 hover:bg-purple-200 hover:scale-110">
-                <Store className="w-8 h-8 text-purple-600 transition-transform duration-300 hover:rotate-12" />
+              <div className="w-16 h-16 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center mx-auto mb-3 transition-all duration-300 hover:bg-purple-200 dark:hover:bg-purple-800 hover:scale-110">
+                <Store className="w-8 h-8 text-purple-600 dark:text-purple-400 transition-transform duration-300 hover:rotate-12" />
               </div>
-              <p className="text-sm font-semibold text-gray-700">Online Business</p>
+              <p className="text-sm font-semibold text-gray-700 dark:text-gray-300">Online Business</p>
             </div>
             <div className="text-center animate-fade-in transform transition-all duration-700 hover:scale-110" style={{ animationDelay: '1.4s' }}>
-              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-3 transition-all duration-300 hover:bg-orange-200 hover:scale-110">
-                <ChartLine className="w-8 h-8 text-orange-600 transition-transform duration-300 hover:rotate-12" />
+              <div className="w-16 h-16 bg-orange-100 dark:bg-orange-900 rounded-full flex items-center justify-center mx-auto mb-3 transition-all duration-300 hover:bg-orange-200 dark:hover:bg-orange-800 hover:scale-110">
+                <ChartLine className="w-8 h-8 text-orange-600 dark:text-orange-400 transition-transform duration-300 hover:rotate-12" />
               </div>
-              <p className="text-sm font-semibold text-gray-700">Investing</p>
+              <p className="text-sm font-semibold text-gray-700 dark:text-gray-300">Investing</p>
             </div>
           </div>
         </div>
