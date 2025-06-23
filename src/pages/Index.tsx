@@ -9,7 +9,7 @@ import PageTransition from "@/components/PageTransition";
 const Index = () => {
   return (
     <PageTransition>
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
         <Hero />
         <AboutSpendora />
         <WorkshopSchedule />
