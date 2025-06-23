@@ -1,3 +1,4 @@
+
 import { Card } from "@/components/ui/card";
 
 const MeetTheTeam = () => {
@@ -5,7 +6,7 @@ const MeetTheTeam = () => {
     {
       name: "Mujeeb Chaudhry",
       expertise: "E-commerce & TikTok Shop",
-      bio: "Mujeeb has experience running TikTok Shop businesses and exploring e-commerce trends. He helps students learn how to start simple online stores and market them creatively.",
+      bio: "Mujeeb specializes in complex online shops and has experience with dropshipping, creating crypto projects, and building profitable apps. He made thousands of dollars through his ventures and helps students learn advanced e-commerce strategies.",
       gradient: "from-blue-500 to-cyan-500"
     },
     {
@@ -17,7 +18,7 @@ const MeetTheTeam = () => {
     {
       name: "Neil Kaila", 
       expertise: "Stock Analysis & Investing",
-      bio: "Neil is a student investor who competed in the Wharton Investment Competition. He's passionate about teaching students how to research, analyze, and confidently invest in stocks.",
+      bio: "Neil is a student investor who competed in the Wharton Investment Competition and made thousands of dollars through his investments. He's passionate about teaching students how to research, analyze, and confidently invest in stocks.",
       gradient: "from-purple-500 to-violet-500"
     },
     {

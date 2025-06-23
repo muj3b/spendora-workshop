@@ -49,7 +49,7 @@ const Footer = () => {
             </div>
             
             <div className="text-center mt-8 text-gray-500 text-sm">
-              <p>&copy; 2024 Spendora. A project by East Ridge High School students.</p>
+              <p>&copy; 2025 Spendora. A project by East Ridge High School students.</p>
             </div>
           </div>
         </div>
