@@ -23,10 +23,10 @@ const Hero = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="relative text-6xl md:text-7xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-green-600 bg-clip-text text-transparent mb-6 leading-tight animate-fade-in transform transition-all duration-1000 overflow-hidden">
-            <span className="relative inline-block">
+          <h1 className="relative text-6xl md:text-7xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-green-600 bg-clip-text text-transparent mb-6 leading-tight animate-fade-in transform transition-all duration-1000">
+            <span className="relative inline-block overflow-hidden">
               Level Up Your Money Skills
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 w-1/3 h-full animate-shine pointer-events-none"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -skew-x-12 w-1/4 h-full animate-shine pointer-events-none mix-blend-overlay"></div>
             </span>
           </h1>
           
