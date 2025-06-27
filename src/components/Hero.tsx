@@ -29,7 +29,7 @@ const Hero = () => {
           
           <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in transform transition-all duration-1000" style={{ animationDelay: '0.2s' }}>
             A free 5-day hands-on workshop designed by high school students to teach 
-            real-world financial skills to students grades 2-10.
+            real-world financial skills to students grades 5-10.
           </p>
 
           <div className="space-y-4 animate-fade-in transform transition-all duration-1000" style={{ animationDelay: '0.4s' }}>
