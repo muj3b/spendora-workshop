@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -109,14 +110,14 @@ export default {
 				},
 				'shine': {
 					'0%': {
-						transform: 'translateX(-200%) skewX(-12deg)',
+						transform: 'translateX(-100%) skewX(-12deg)',
 						opacity: '0'
 					},
 					'50%': {
 						opacity: '1'
 					},
 					'100%': {
-						transform: 'translateX(400%) skewX(-12deg)',
+						transform: 'translateX(300%) skewX(-12deg)',
 						opacity: '0'
 					}
 				}
@@ -126,7 +127,7 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.8s ease-out forwards',
 				'float': 'float 6s ease-in-out infinite',
-				'shine': 'shine 2s ease-in-out infinite 7s'
+				'shine': 'shine 3s ease-in-out infinite 8s'
 			}
 		}
 	},
