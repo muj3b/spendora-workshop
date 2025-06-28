@@ -29,7 +29,7 @@ To reduce this risk most people spread their money out by owning multiple differ
 Learning about stocks will help you understand money and how these companies work and the earlier you learn the better prepared you will be in the future and you can start earning money way easier.`;
 
   return (
-    <PageTransition transitionType="bubble">
+    <PageTransition transitionType="fade">
       <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
         <div className="container mx-auto px-6 py-12">
           <div className="max-w-4xl mx-auto">
@@ -58,9 +58,9 @@ Learning about stocks will help you understand money and how these companies wor
             <div className="prose prose-lg max-w-none dark:prose-invert">
               <WordByWordText 
                 text={articleText}
-                className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed space-y-6"
-                delay={800}
-                wordDelay={60}
+                className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed"
+                delay={300}
+                wordDelay={30
               />
             </div>
           </div>

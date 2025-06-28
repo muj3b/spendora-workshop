@@ -3,14 +3,13 @@ import React, { useState, useEffect } from 'react';
 
 interface PageTransitionProps {
   children: React.ReactNode;
-  transitionType?: 'welcome' | 'bubble';
+  transitionType?: 'welcome' | 'fade';
 }
 
 const PageTransition: React.FC<PageTransitionProps> = ({ children, transitionType = 'welcome' }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [showWelcome, setShowWelcome] = useState(false);
   const [animationPhase, setAnimationPhase] = useState('start');
-  const [bubblePhase, setBubblePhase] = useState('start'); // 'start', 'expand', 'fade', 'done'
 
   useEffect(() => {
     if (transitionType === 'welcome') {
@@ -41,24 +40,13 @@ const PageTransition: React.FC<PageTransitionProps> = ({ children, transitionTyp
         clearTimeout(phase4Timer);
       };
     } else {
-      // Bubble animation
-      const expandTimer = setTimeout(() => {
-        setBubblePhase('expand');
+      // Simple fade animation
+      const fadeTimer = setTimeout(() => {
+        setIsLoaded(true);
       }, 100);
 
-      const fadeTimer = setTimeout(() => {
-        setBubblePhase('fade');
-        setIsLoaded(true);
-      }, 600);
-
-      const doneTimer = setTimeout(() => {
-        setBubblePhase('done');
-      }, 1200);
-
       return () => {
-        clearTimeout(expandTimer);
         clearTimeout(fadeTimer);
-        clearTimeout(doneTimer);
       };
     }
   }, [transitionType]);
@@ -80,37 +68,7 @@ const PageTransition: React.FC<PageTransitionProps> = ({ children, transitionTyp
     }
   };
 
-  const getBubbleStyles = () => {
-    switch (bubblePhase) {
-      case 'start':
-        return 'top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-0 h-0 rounded-full opacity-100 scale-0';
-      case 'expand':
-        return 'top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-screen h-screen rounded-none opacity-100 scale-150';
-      case 'fade':
-        return 'top-0 left-0 w-full h-full rounded-none opacity-0 scale-150';
-      case 'done':
-        return 'top-0 left-0 w-full h-full rounded-none opacity-0 scale-150';
-      default:
-        return '';
-    }
-  };
-
   const getTransitionDuration = () => {
-    if (transitionType === 'bubble') {
-      switch (bubblePhase) {
-        case 'start':
-          return 'duration-100';
-        case 'expand':
-          return 'duration-500';
-        case 'fade':
-          return 'duration-600';
-        case 'done':
-          return 'duration-0';
-        default:
-          return 'duration-300';
-      }
-    }
-
     switch (animationPhase) {
       case 'start':
         return 'duration-200';
@@ -148,24 +106,6 @@ const PageTransition: React.FC<PageTransitionProps> = ({ children, transitionTyp
         </div>
       )}
 
-      {/* Bubble Animation */}
-      {transitionType === 'bubble' && (
-        <div 
-          className={`fixed inset-0 z-50 pointer-events-none transition-all ease-in-out ${
-            bubblePhase === 'done' 
-              ? 'opacity-0' 
-              : 'opacity-100'
-          }`}
-        >
-          <div 
-            className={`absolute bg-gradient-to-br from-purple-500 via-blue-600 to-teal-500 transition-all ease-in-out ${getBubbleStyles()} ${getTransitionDuration()}`}
-            style={{
-              boxShadow: '0 0 50px rgba(168, 85, 247, 0.4)',
-            }}
-          />
-        </div>
-      )}
-
       {/* Welcome Text */}
       {showWelcome && transitionType === 'welcome' && (
         <div className="fixed inset-0 z-[60] flex items-center justify-center pointer-events-none">
@@ -177,10 +117,10 @@ const PageTransition: React.FC<PageTransitionProps> = ({ children, transitionTyp
 
       {/* Page Content */}
       <div 
-        className={`transition-all duration-[1000ms] ease-out ${
+        className={`transition-all duration-500 ease-out ${
           isLoaded 
             ? 'opacity-100 transform translate-y-0' 
-            : 'opacity-0 transform translate-y-8'
+            : 'opacity-0 transform translate-y-4'
         }`}
       >
         {children}
