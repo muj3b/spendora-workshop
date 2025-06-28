@@ -1,4 +1,3 @@
-
 import Hero from "@/components/Hero";
 import AboutSpendora from "@/components/AboutSpendora";
 import WorkshopSchedule from "@/components/WorkshopSchedule";
@@ -8,7 +7,7 @@ import PageTransition from "@/components/PageTransition";
 
 const Index = () => {
   return (
-    <PageTransition>
+    <PageTransition transitionType="welcome">
       <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
         <Hero />
         <AboutSpendora />
