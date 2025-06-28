@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { ChartLine, DollarSign, Store, ArrowRight } from "lucide-react";
+import { ChartLine, DollarSign, Store, ArrowRight, Coins } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
@@ -67,7 +67,7 @@ const Hero = () => {
             </div>
             <div className="text-center animate-fade-in transform transition-all duration-700 hover:scale-110 relative" style={{ animationDelay: '1s' }}>
               <div className="w-20 h-20 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mx-auto mb-3 transition-all duration-300 hover:bg-green-200 dark:hover:bg-green-800 hover:scale-110 cursor-pointer">
-                <DollarSign className="w-10 h-10 text-green-600 dark:text-green-400 transition-transform duration-300 hover:rotate-12" />
+                <Coins className="w-10 h-10 text-green-600 dark:text-green-400 transition-transform duration-300 hover:rotate-12" />
               </div>
               <p className="text-base font-semibold text-gray-700 dark:text-gray-300 mb-2">Budgeting</p>
               <div className="flex items-center justify-center space-x-1 text-sm text-gray-500 dark:text-gray-400">
