@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -108,17 +107,18 @@ export default {
 						transform: 'translateY(-20px)',
 					}
 				},
-				'shine': {
+				'letter-shine': {
 					'0%': {
-						transform: 'translateX(-100%) skewX(-12deg)',
-						opacity: '0'
+						'text-shadow': '0 0 0 transparent'
 					},
-					'50%': {
-						opacity: '1'
+					'10%': {
+						'text-shadow': '0 0 10px rgba(59, 130, 246, 0.8), 0 0 20px rgba(147, 51, 234, 0.6), 0 0 30px rgba(34, 197, 94, 0.4)'
+					},
+					'20%': {
+						'text-shadow': '0 0 0 transparent'
 					},
 					'100%': {
-						transform: 'translateX(300%) skewX(-12deg)',
-						opacity: '0'
+						'text-shadow': '0 0 0 transparent'
 					}
 				}
 			},
@@ -127,7 +127,7 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.8s ease-out forwards',
 				'float': 'float 6s ease-in-out infinite',
-				'shine': 'shine 3s ease-in-out infinite 8s'
+				'letter-shine': 'letter-shine 8s ease-in-out infinite'
 			}
 		}
 	},

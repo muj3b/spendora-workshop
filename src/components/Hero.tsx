@@ -1,8 +1,11 @@
 
 import { Button } from "@/components/ui/button";
-import { ChartLine, Coins, Store } from "lucide-react";
+import { ChartLine, Coins, Store, ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 flex items-center overflow-hidden transition-colors duration-300">
       {/* Background decorative elements */}
@@ -24,9 +27,8 @@ const Hero = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="relative text-6xl md:text-7xl font-bold mb-6 leading-tight animate-fade-in transform transition-all duration-1000">
-            <span className="relative inline-block bg-gradient-to-r from-blue-600 via-purple-600 to-green-600 bg-clip-text text-transparent overflow-hidden">
-              Level Up Your Money Skills
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/80 to-transparent -skew-x-12 w-1/4 h-full animate-shine pointer-events-none"></div>
+            <span className="relative inline-block bg-gradient-to-r from-blue-600 via-purple-600 to-green-600 bg-clip-text text-transparent">
+              <span className="animate-letter-shine">Level Up Your Money Skills</span>
             </span>
           </h1>
           
@@ -49,30 +51,49 @@ const Hero = () => {
             </p>
           </div>
 
-          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto">
-            <div className="text-center animate-fade-in transform transition-all duration-700 hover:scale-110" style={{ animationDelay: '0.8s' }}>
-              <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-3 transition-all duration-300 hover:bg-blue-200 dark:hover:bg-blue-800 hover:scale-110">
-                <ChartLine className="w-8 h-8 text-blue-600 dark:text-blue-400 transition-transform duration-300 hover:rotate-12" />
+          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto">
+            <div className="text-center animate-fade-in transform transition-all duration-700 hover:scale-110 relative" style={{ animationDelay: '0.8s' }}>
+              <div 
+                className="w-20 h-20 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-3 transition-all duration-300 hover:bg-blue-200 dark:hover:bg-blue-800 hover:scale-110 cursor-pointer"
+                onClick={() => navigate('/stock-markets')}
+              >
+                <ChartLine className="w-10 h-10 text-blue-600 dark:text-blue-400 transition-transform duration-300 hover:rotate-12" />
               </div>
-              <p className="text-sm font-semibold text-gray-700 dark:text-gray-300">Stock Markets</p>
+              <p className="text-base font-semibold text-gray-700 dark:text-gray-300 mb-2">Stock Markets</p>
+              <div className="flex items-center justify-center space-x-1 text-sm text-blue-600 dark:text-blue-400">
+                <span>Click me</span>
+                <ArrowRight className="w-4 h-4" />
+              </div>
             </div>
-            <div className="text-center animate-fade-in transform transition-all duration-700 hover:scale-110" style={{ animationDelay: '1s' }}>
-              <div className="w-16 h-16 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mx-auto mb-3 transition-all duration-300 hover:bg-green-200 dark:hover:bg-green-800 hover:scale-110">
-                <Coins className="w-8 h-8 text-green-600 dark:text-green-400 transition-transform duration-300 hover:rotate-12" />
+            <div className="text-center animate-fade-in transform transition-all duration-700 hover:scale-110 relative" style={{ animationDelay: '1s' }}>
+              <div className="w-20 h-20 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mx-auto mb-3 transition-all duration-300 hover:bg-green-200 dark:hover:bg-green-800 hover:scale-110 cursor-pointer">
+                <Coins className="w-10 h-10 text-green-600 dark:text-green-400 transition-transform duration-300 hover:rotate-12" />
               </div>
-              <p className="text-sm font-semibold text-gray-700 dark:text-gray-300">Budgeting</p>
+              <p className="text-base font-semibold text-gray-700 dark:text-gray-300 mb-2">Budgeting</p>
+              <div className="flex items-center justify-center space-x-1 text-sm text-green-600 dark:text-green-400">
+                <span>Click me</span>
+                <ArrowRight className="w-4 h-4" />
+              </div>
             </div>
-            <div className="text-center animate-fade-in transform transition-all duration-700 hover:scale-110" style={{ animationDelay: '1.2s' }}>
-              <div className="w-16 h-16 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center mx-auto mb-3 transition-all duration-300 hover:bg-purple-200 dark:hover:bg-purple-800 hover:scale-110">
-                <Store className="w-8 h-8 text-purple-600 dark:text-purple-400 transition-transform duration-300 hover:rotate-12" />
+            <div className="text-center animate-fade-in transform transition-all duration-700 hover:scale-110 relative" style={{ animationDelay: '1.2s' }}>
+              <div className="w-20 h-20 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center mx-auto mb-3 transition-all duration-300 hover:bg-purple-200 dark:hover:bg-purple-800 hover:scale-110 cursor-pointer">
+                <Store className="w-10 h-10 text-purple-600 dark:text-purple-400 transition-transform duration-300 hover:rotate-12" />
               </div>
-              <p className="text-sm font-semibold text-gray-700 dark:text-gray-300">Online Business</p>
+              <p className="text-base font-semibold text-gray-700 dark:text-gray-300 mb-2">Online Business</p>
+              <div className="flex items-center justify-center space-x-1 text-sm text-purple-600 dark:text-purple-400">
+                <span>Click me</span>
+                <ArrowRight className="w-4 h-4" />
+              </div>
             </div>
-            <div className="text-center animate-fade-in transform transition-all duration-700 hover:scale-110" style={{ animationDelay: '1.4s' }}>
-              <div className="w-16 h-16 bg-orange-100 dark:bg-orange-900 rounded-full flex items-center justify-center mx-auto mb-3 transition-all duration-300 hover:bg-orange-200 dark:hover:bg-orange-800 hover:scale-110">
-                <ChartLine className="w-8 h-8 text-orange-600 dark:text-orange-400 transition-transform duration-300 hover:rotate-12" />
+            <div className="text-center animate-fade-in transform transition-all duration-700 hover:scale-110 relative" style={{ animationDelay: '1.4s' }}>
+              <div className="w-20 h-20 bg-orange-100 dark:bg-orange-900 rounded-full flex items-center justify-center mx-auto mb-3 transition-all duration-300 hover:bg-orange-200 dark:hover:bg-orange-800 hover:scale-110 cursor-pointer">
+                <ChartLine className="w-10 h-10 text-orange-600 dark:text-orange-400 transition-transform duration-300 hover:rotate-12" />
               </div>
-              <p className="text-sm font-semibold text-gray-700 dark:text-gray-300">Investing</p>
+              <p className="text-base font-semibold text-gray-700 dark:text-gray-300 mb-2">Investing</p>
+              <div className="flex items-center justify-center space-x-1 text-sm text-orange-600 dark:text-orange-400">
+                <span>Click me</span>
+                <ArrowRight className="w-4 h-4" />
+              </div>
             </div>
           </div>
         </div>
