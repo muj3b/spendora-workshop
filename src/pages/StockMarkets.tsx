@@ -60,7 +60,7 @@ Learning about stocks will help you understand money and how these companies wor
                 text={articleText}
                 className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed"
                 delay={300}
-                wordDelay={30
+                wordDelay={15}
               />
             </div>
           </div>

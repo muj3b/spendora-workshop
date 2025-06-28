@@ -12,29 +12,18 @@ const WordByWordText: React.FC<WordByWordTextProps> = ({
   text, 
   className = '', 
   delay = 500,
-  wordDelay = 30
+  wordDelay = 15
 }) => {
   const [visibleWords, setVisibleWords] = useState(0);
   
-  // Split text into paragraphs and then words, preserving structure
-  const paragraphs = text.split('\n\n');
-  const allWords: Array<{word: string, isNewParagraph: boolean}> = [];
-  
-  paragraphs.forEach((paragraph, paragraphIndex) => {
-    const words = paragraph.split(' ');
-    words.forEach((word, wordIndex) => {
-      allWords.push({
-        word,
-        isNewParagraph: paragraphIndex > 0 && wordIndex === 0
-      });
-    });
-  });
+  // Split text into words, preserving paragraph structure
+  const words = text.split(/\s+/);
 
   useEffect(() => {
     const startTimer = setTimeout(() => {
       const interval = setInterval(() => {
         setVisibleWords((prev) => {
-          if (prev >= allWords.length) {
+          if (prev >= words.length) {
             clearInterval(interval);
             return prev;
           }
@@ -46,23 +35,22 @@ const WordByWordText: React.FC<WordByWordTextProps> = ({
     }, delay);
 
     return () => clearTimeout(startTimer);
-  }, [allWords.length, delay, wordDelay]);
+  }, [words.length, delay, wordDelay]);
 
   return (
     <div className={className}>
-      {allWords.map((item, index) => (
+      {words.map((word, index) => (
         <React.Fragment key={index}>
-          {item.isNewParagraph && <br /><br />}
           <span
-            className={`inline-block transition-all duration-200 ${
+            className={`inline-block transition-all duration-200 mr-1 ${
               index < visibleWords 
                 ? 'opacity-100 transform translate-y-0' 
                 : 'opacity-0 transform translate-y-1'
             }`}
           >
-            {item.word}
-            {index < allWords.length - 1 && ' '}
+            {word}
           </span>
+          {word.endsWith('.') && index < words.length - 1 && <br />}
         </React.Fragment>
       ))}
     </div>
