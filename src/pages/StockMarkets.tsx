@@ -52,7 +52,7 @@ Learning about stocks will help you understand money and how these companies wor
             </div>
 
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-8">
-              Stock Markets
+              Stock Markets & Investing
             </h1>
 
             <div className="prose prose-lg max-w-none dark:prose-invert">

@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { ChartLine, Coins, Store, ArrowRight } from "lucide-react";
+import { ChartLine, DollarSign, Store, ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
@@ -14,7 +14,7 @@ const Hero = () => {
           <ChartLine size={120} className="text-blue-600" />
         </div>
         <div className="absolute top-40 right-20 opacity-10 animate-[float_8s_ease-in-out_infinite_2s]">
-          <Coins size={100} className="text-green-600" />
+          <DollarSign size={100} className="text-green-600" />
         </div>
         <div className="absolute bottom-40 left-20 opacity-10 animate-[float_7s_ease-in-out_infinite_1s]">
           <Store size={110} className="text-purple-600" />
@@ -59,7 +59,7 @@ const Hero = () => {
               >
                 <ChartLine className="w-10 h-10 text-blue-600 dark:text-blue-400 transition-transform duration-300 hover:rotate-12" />
               </div>
-              <p className="text-base font-semibold text-gray-700 dark:text-gray-300 mb-2">Stock Markets</p>
+              <p className="text-base font-semibold text-gray-700 dark:text-gray-300 mb-2">Stock Markets & Investing</p>
               <div className="flex items-center justify-center space-x-1 text-sm text-blue-600 dark:text-blue-400">
                 <span>Click me</span>
                 <ArrowRight className="w-4 h-4" />
@@ -67,12 +67,11 @@ const Hero = () => {
             </div>
             <div className="text-center animate-fade-in transform transition-all duration-700 hover:scale-110 relative" style={{ animationDelay: '1s' }}>
               <div className="w-20 h-20 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mx-auto mb-3 transition-all duration-300 hover:bg-green-200 dark:hover:bg-green-800 hover:scale-110 cursor-pointer">
-                <Coins className="w-10 h-10 text-green-600 dark:text-green-400 transition-transform duration-300 hover:rotate-12" />
+                <DollarSign className="w-10 h-10 text-green-600 dark:text-green-400 transition-transform duration-300 hover:rotate-12" />
               </div>
               <p className="text-base font-semibold text-gray-700 dark:text-gray-300 mb-2">Budgeting</p>
-              <div className="flex items-center justify-center space-x-1 text-sm text-green-600 dark:text-green-400">
-                <span>Click me</span>
-                <ArrowRight className="w-4 h-4" />
+              <div className="flex items-center justify-center space-x-1 text-sm text-gray-500 dark:text-gray-400">
+                <span>Coming Soon</span>
               </div>
             </div>
             <div className="text-center animate-fade-in transform transition-all duration-700 hover:scale-110 relative" style={{ animationDelay: '1.2s' }}>
@@ -80,19 +79,17 @@ const Hero = () => {
                 <Store className="w-10 h-10 text-purple-600 dark:text-purple-400 transition-transform duration-300 hover:rotate-12" />
               </div>
               <p className="text-base font-semibold text-gray-700 dark:text-gray-300 mb-2">Online Business</p>
-              <div className="flex items-center justify-center space-x-1 text-sm text-purple-600 dark:text-purple-400">
-                <span>Click me</span>
-                <ArrowRight className="w-4 h-4" />
+              <div className="flex items-center justify-center space-x-1 text-sm text-gray-500 dark:text-gray-400">
+                <span>Coming Soon</span>
               </div>
             </div>
             <div className="text-center animate-fade-in transform transition-all duration-700 hover:scale-110 relative" style={{ animationDelay: '1.4s' }}>
               <div className="w-20 h-20 bg-orange-100 dark:bg-orange-900 rounded-full flex items-center justify-center mx-auto mb-3 transition-all duration-300 hover:bg-orange-200 dark:hover:bg-orange-800 hover:scale-110 cursor-pointer">
-                <ChartLine className="w-10 h-10 text-orange-600 dark:text-orange-400 transition-transform duration-300 hover:rotate-12" />
+                <DollarSign className="w-10 h-10 text-orange-600 dark:text-orange-400 transition-transform duration-300 hover:rotate-12" />
               </div>
-              <p className="text-base font-semibold text-gray-700 dark:text-gray-300 mb-2">Investing</p>
-              <div className="flex items-center justify-center space-x-1 text-sm text-orange-600 dark:text-orange-400">
-                <span>Click me</span>
-                <ArrowRight className="w-4 h-4" />
+              <p className="text-base font-semibold text-gray-700 dark:text-gray-300 mb-2">Money</p>
+              <div className="flex items-center justify-center space-x-1 text-sm text-gray-500 dark:text-gray-400">
+                <span>Coming Soon</span>
               </div>
             </div>
           </div>

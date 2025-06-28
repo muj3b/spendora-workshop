@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 
 interface PageTransitionProps {
@@ -13,6 +12,18 @@ const PageTransition: React.FC<PageTransitionProps> = ({ children, transitionTyp
 
   useEffect(() => {
     if (transitionType === 'welcome') {
+      // Check if welcome animation has already been shown
+      const hasSeenWelcome = sessionStorage.getItem('hasSeenWelcome');
+      
+      if (hasSeenWelcome) {
+        // Skip welcome animation, just fade in
+        setIsLoaded(true);
+        return;
+      }
+
+      // Mark that we've shown the welcome animation
+      sessionStorage.setItem('hasSeenWelcome', 'true');
+
       // Welcome animation (original)
       const phase1Timer = setTimeout(() => {
         setAnimationPhase('rise');
@@ -88,7 +99,7 @@ const PageTransition: React.FC<PageTransitionProps> = ({ children, transitionTyp
   return (
     <>
       {/* Welcome Animation */}
-      {transitionType === 'welcome' && (
+      {transitionType === 'welcome' && !sessionStorage.getItem('hasSeenWelcome') && (
         <div 
           className={`fixed inset-0 z-50 pointer-events-none transition-all ease-in-out ${
             animationPhase === 'done' 
