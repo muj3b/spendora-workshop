@@ -64,18 +64,18 @@ const Hero = () => {
               <div className="flex items-center justify-center space-x-1 text-sm text-blue-600 dark:text-blue-400 cursor-pointer hover:text-blue-700 dark:hover:text-blue-300 transition-colors">
                 <span>Click me</span>
                 <svg 
-                  width="20" 
-                  height="20" 
-                  viewBox="0 0 20 20" 
+                  width="16" 
+                  height="16" 
+                  viewBox="0 0 16 16" 
                   fill="none" 
                   className="animate-pulse"
                 >
                   <path 
-                    d="M10 2L10 12M10 2L7 5M10 2L13 5" 
+                    d="M8 12C8 12 12 8 8 4C8 4 6 6 8 8C8 8 4 8 8 12Z" 
                     stroke="currentColor" 
-                    strokeWidth="2" 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round"
+                    strokeWidth="1.5" 
+                    fill="currentColor"
+                    className="opacity-70"
                   />
                 </svg>
               </div>
@@ -102,7 +102,7 @@ const Hero = () => {
               <div className="w-20 h-20 bg-orange-100 dark:bg-orange-900 rounded-full flex items-center justify-center mx-auto mb-3 transition-all duration-300 hover:bg-orange-200 dark:hover:bg-orange-800 hover:scale-110 cursor-pointer">
                 <DollarSign className="w-10 h-10 text-orange-600 dark:text-orange-400 transition-transform duration-300 hover:rotate-12" />
               </div>
-              <p className="text-base font-semibold text-gray-700 dark:text-gray-300 mb-2">Money</p>
+              <p className="text-base font-semibold text-gray-700 dark:text-gray-300 mb-2">Crypto + NFTs</p>
               <div className="flex items-center justify-center space-x-1 text-sm text-gray-500 dark:text-gray-400">
                 <span>Coming Soon</span>
               </div>
