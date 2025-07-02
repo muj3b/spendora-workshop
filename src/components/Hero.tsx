@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ChartLine, DollarSign, Store, ArrowRight, Coins, ArrowUp } from "lucide-react";
+import { ChartLine, DollarSign, Store, ArrowRight, Coins } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
@@ -62,7 +62,21 @@ const Hero = () => {
               <p className="text-base font-semibold text-gray-700 dark:text-gray-300 mb-2">Stock Markets & Investing</p>
               <div className="flex items-center justify-center space-x-1 text-sm text-blue-600 dark:text-blue-400 cursor-pointer hover:text-blue-700 dark:hover:text-blue-300 transition-colors">
                 <span>Click me</span>
-                <ArrowUp className="w-4 h-4 animate-pulse" />
+                <svg 
+                  width="16" 
+                  height="16" 
+                  viewBox="0 0 16 16" 
+                  fill="none" 
+                  className="animate-pulse"
+                >
+                  <path 
+                    d="M8 12C8 12 12 8 8 4C8 4 6 6 8 8C8 8 4 8 8 12Z" 
+                    stroke="currentColor" 
+                    strokeWidth="1.5" 
+                    fill="currentColor"
+                    className="opacity-70"
+                  />
+                </svg>
               </div>
             </div>
             <div className="text-center animate-fade-in transform transition-all duration-700 hover:scale-110 relative" style={{ animationDelay: '1s' }}>
