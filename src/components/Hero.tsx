@@ -52,17 +52,18 @@ const Hero = () => {
           </div>
 
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto">
-            <div className="text-center animate-fade-in transform transition-all duration-700 hover:scale-110 relative" style={{ animationDelay: '0.8s' }}>
-              <div 
-                className="w-20 h-20 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-3 transition-all duration-300 hover:bg-blue-200 dark:hover:bg-blue-800 hover:scale-110 cursor-pointer"
-                onClick={() => navigate('/stock-markets')}
-              >
+            <div 
+              className="text-center animate-fade-in transform transition-all duration-700 hover:scale-110 relative cursor-pointer" 
+              style={{ animationDelay: '0.8s' }}
+              onClick={() => navigate('/stock-markets')}
+            >
+              <div className="w-20 h-20 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-3 transition-all duration-300 hover:bg-blue-200 dark:hover:bg-blue-800 hover:scale-110">
                 <ChartLine className="w-10 h-10 text-blue-600 dark:text-blue-400 transition-transform duration-300 hover:rotate-12" />
               </div>
               <p className="text-base font-semibold text-gray-700 dark:text-gray-300 mb-2">Stock Markets & Investing</p>
-              <div className="flex items-center justify-center space-x-1 text-sm text-blue-600 dark:text-blue-400">
+              <div className="flex items-center justify-center space-x-1 text-sm text-blue-600 dark:text-blue-400 cursor-pointer hover:text-blue-700 dark:hover:text-blue-300 transition-colors">
                 <span>Click me</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4 animate-pulse" />
               </div>
             </div>
             <div className="text-center animate-fade-in transform transition-all duration-700 hover:scale-110 relative" style={{ animationDelay: '1s' }}>
