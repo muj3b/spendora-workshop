@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { ChartLine, DollarSign, Store, ArrowRight, Coins } from "lucide-react";
 import { useNavigate } from "react-router-dom";
@@ -63,18 +64,18 @@ const Hero = () => {
               <div className="flex items-center justify-center space-x-1 text-sm text-blue-600 dark:text-blue-400 cursor-pointer hover:text-blue-700 dark:hover:text-blue-300 transition-colors">
                 <span>Click me</span>
                 <svg 
-                  width="16" 
-                  height="16" 
-                  viewBox="0 0 16 16" 
+                  width="20" 
+                  height="20" 
+                  viewBox="0 0 20 20" 
                   fill="none" 
                   className="animate-pulse"
                 >
                   <path 
-                    d="M8 12C8 12 12 8 8 4C8 4 6 6 8 8C8 8 4 8 8 12Z" 
+                    d="M10 2L10 12M10 2L7 5M10 2L13 5" 
                     stroke="currentColor" 
-                    strokeWidth="1.5" 
-                    fill="currentColor"
-                    className="opacity-70"
+                    strokeWidth="2" 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round"
                   />
                 </svg>
               </div>
