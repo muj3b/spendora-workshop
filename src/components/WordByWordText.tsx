@@ -48,7 +48,7 @@ const WordByWordText: React.FC<WordByWordTextProps> = ({
                 : 'opacity-0 transform translate-y-1'
             } ${
               index === visibleWords - 1 && visibleWords < words.length
-                ? 'animate-pulse text-shadow-[0_0_10px_rgba(59,130,246,0.8)]'
+                ? 'text-shimmer'
                 : ''
             }`}
           >

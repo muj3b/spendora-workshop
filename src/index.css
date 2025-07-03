@@ -99,5 +99,32 @@
 
   body {
     @apply bg-background text-foreground;
+    transition: filter 0.1s ease-out;
+  }
+
+  .motion-blur {
+    filter: blur(2px);
+  }
+
+  .text-shimmer {
+    animation: shimmer 0.8s ease-out;
+    background: linear-gradient(
+      90deg,
+      currentColor 25%,
+      rgba(59, 130, 246, 0.8) 50%,
+      currentColor 75%
+    );
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
   }
 }
