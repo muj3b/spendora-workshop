@@ -18,7 +18,62 @@
   </head>
 
   <body>
+    <canvas id="motion-blur-canvas" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 9999; pointer-events: none;"></canvas>
     <div id="root"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+const canvas = document.getElementById('motion-blur-canvas');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+window.addEventListener('resize', resizeCanvas);
+
+let lastScrollY = window.scrollY;
+let blurImage = null;
+let opacity = 0;
+
+function applyBlur(strength = 0.3, duration = 150) {
+  html2canvas(document.body, { backgroundColor: null }).then((screenshot) => {
+    blurImage = screenshot;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.globalAlpha = strength;
+    ctx.filter = 'blur(6px)';
+    ctx.drawImage(blurImage, 0, 0, canvas.width, canvas.height);
+    ctx.filter = 'none';
+    ctx.globalAlpha = 1;
+
+    setTimeout(() => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }, duration);
+  });
+}
+
+// Blur on scroll
+let scrollTimeout;
+window.addEventListener('scroll', () => {
+  const speed = Math.abs(window.scrollY - lastScrollY);
+  lastScrollY = window.scrollY;
+  if (speed > 5) {
+    applyBlur(Math.min(speed / 100, 0.4), 150);
+  }
+  clearTimeout(scrollTimeout);
+  scrollTimeout = setTimeout(() => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+  }, 200);
+});
+
+// Blur on click
+document.addEventListener('click', (e) => {
+  if (e.target.tagName === 'BUTTON' || e.target.closest('button')) {
+    applyBlur(0.25, 120);
+  }
+});
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

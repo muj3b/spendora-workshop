@@ -12,7 +12,7 @@ const WordByWordText: React.FC<WordByWordTextProps> = ({
   text, 
   className = '', 
   delay = 500,
-  wordDelay = 15
+  wordDelay = 120
 }) => {
   const [visibleWords, setVisibleWords] = useState(0);
   
@@ -48,7 +48,7 @@ const WordByWordText: React.FC<WordByWordTextProps> = ({
                 : 'opacity-0 transform translate-y-1'
             } ${
               index === visibleWords - 1 && visibleWords < words.length
-                ? 'text-shimmer'
+                ? 'glare-slide'
                 : ''
             }`}
           >

@@ -99,27 +99,25 @@
 
   body {
     @apply bg-background text-foreground;
-    transition: filter 0.1s ease-out;
   }
 
-  .motion-blur {
-    filter: blur(2px);
-  }
-
-  .text-shimmer {
-    animation: shimmer 0.8s ease-out;
+  .glare-slide {
+    position: relative;
     background: linear-gradient(
       90deg,
-      currentColor 25%,
-      rgba(59, 130, 246, 0.8) 50%,
-      currentColor 75%
+      currentColor 0%,
+      currentColor 40%,
+      rgba(255, 255, 255, 0.9) 50%,
+      currentColor 60%,
+      currentColor 100%
     );
     background-size: 200% 100%;
     background-clip: text;
     -webkit-background-clip: text;
+    animation: glare-sweep 0.8s ease-out;
   }
 
-  @keyframes shimmer {
+  @keyframes glare-sweep {
     0% {
       background-position: -200% 0;
     }
