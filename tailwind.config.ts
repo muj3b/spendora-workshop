@@ -160,10 +160,10 @@ export default {
 				},
 				'pulse-slow': {
 					'0%, 100%': {
-						boxShadow: '0 0 0 0 rgba(59, 130, 246, 0.7)'
+						boxShadow: '0 0 0 0 rgba(59, 130, 246, 0.4)'
 					},
 					'50%': {
-						boxShadow: '0 0 0 20px rgba(59, 130, 246, 0)'
+						boxShadow: '0 0 0 10px rgba(59, 130, 246, 0)'
 					}
 				}
 			},
@@ -175,7 +175,7 @@ export default {
 				'letter-shine': 'letter-shine 8s ease-in-out infinite',
 				'dynamic-island-pop': 'dynamic-island-pop 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards',
 				'dynamic-island-scale': 'dynamic-island-scale 1.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards',
-				'pulse-slow': 'pulse-slow 3s ease-in-out infinite'
+				'pulse-slow': 'pulse-slow 6s ease-in-out infinite'
 			}
 		}
 	},

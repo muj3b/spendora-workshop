@@ -17,9 +17,9 @@ const AboutSpendora = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <Card className="p-8 text-center hover:shadow-xl dark:bg-gray-800 dark:border-gray-700 transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 animate-fade-in" style={{ animationDelay: '0.1s' }}>
-            <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-6 transition-all duration-300 hover:bg-blue-200 dark:hover:bg-blue-800 hover:scale-110">
-              <Coins className="w-8 h-8 text-blue-600 dark:text-blue-400 transition-transform duration-300 hover:rotate-12" />
+          <Card className="p-8 text-center hover:shadow-xl dark:bg-gray-800 dark:border-gray-700 transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 animate-dynamic-island-pop" style={{ animationDelay: '0.1s' }}>
+            <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 transition-all duration-500 hover:scale-110 hover:rotate-3 shadow-lg">
+              <Coins className="w-8 h-8 text-white transition-transform duration-300 hover:rotate-12" />
             </div>
             <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Real-World Skills</h3>
             <p className="text-gray-600 dark:text-gray-400">
@@ -27,9 +27,9 @@ const AboutSpendora = () => {
             </p>
           </Card>
 
-          <Card className="p-8 text-center hover:shadow-xl dark:bg-gray-800 dark:border-gray-700 transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            <div className="w-16 h-16 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mx-auto mb-6 transition-all duration-300 hover:bg-green-200 dark:hover:bg-green-800 hover:scale-110">
-              <Store className="w-8 h-8 text-green-600 dark:text-green-400 transition-transform duration-300 hover:rotate-12" />
+          <Card className="p-8 text-center hover:shadow-xl dark:bg-gray-800 dark:border-gray-700 transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 animate-dynamic-island-pop" style={{ animationDelay: '0.2s' }}>
+            <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6 transition-all duration-500 hover:scale-110 hover:rotate-3 shadow-lg">
+              <Store className="w-8 h-8 text-white transition-transform duration-300 hover:rotate-12" />
             </div>
             <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Modern Business</h3>
             <p className="text-gray-600 dark:text-gray-400">
@@ -37,9 +37,9 @@ const AboutSpendora = () => {
             </p>
           </Card>
 
-          <Card className="p-8 text-center hover:shadow-xl dark:bg-gray-800 dark:border-gray-700 transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-            <div className="w-16 h-16 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center mx-auto mb-6 transition-all duration-300 hover:bg-purple-200 dark:hover:bg-purple-800 hover:scale-110">
-              <ChartLine className="w-8 h-8 text-purple-600 dark:text-purple-400 transition-transform duration-300 hover:rotate-12" />
+          <Card className="p-8 text-center hover:shadow-xl dark:bg-gray-800 dark:border-gray-700 transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 animate-dynamic-island-pop" style={{ animationDelay: '0.3s' }}>
+            <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 transition-all duration-500 hover:scale-110 hover:rotate-3 shadow-lg">
+              <ChartLine className="w-8 h-8 text-white transition-transform duration-300 hover:rotate-12" />
             </div>
             <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Investment Basics</h3>
             <p className="text-gray-600 dark:text-gray-400">

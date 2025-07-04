@@ -43,7 +43,7 @@ const MeetTheTeam = () => {
 
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {team.map((member, index) => (
-            <Card key={index} className="p-8 hover:shadow-xl dark:bg-gray-800 dark:border-gray-700 transition-all duration-300 transform hover:-translate-y-2">
+            <Card key={index} className="p-8 hover:shadow-xl dark:bg-gray-800 dark:border-gray-700 transition-all duration-300 transform hover:-translate-y-2 animate-dynamic-island-pop" style={{ animationDelay: `${index * 0.1}s` }}>
               <div className="text-center mb-6">
                 <div className={`w-20 h-20 rounded-full bg-gradient-to-r ${member.gradient} mx-auto mb-4 flex items-center justify-center`}>
                   <span className="text-white text-2xl font-bold">

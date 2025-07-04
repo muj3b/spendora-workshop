@@ -59,7 +59,7 @@ const WorkshopSchedule = () => {
 
         <div className="space-y-6 max-w-4xl mx-auto">
           {schedule.map((day, index) => (
-            <Card key={index} className="overflow-hidden hover:shadow-lg dark:bg-gray-700 dark:border-gray-600 transition-all duration-300 transform hover:-translate-y-1 animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
+            <Card key={index} className="overflow-hidden hover:shadow-lg dark:bg-gray-700 dark:border-gray-600 transition-all duration-300 transform hover:-translate-y-1 animate-dynamic-island-pop" style={{ animationDelay: `${index * 0.1}s` }}>
               <div className="flex">
                 <div className={`w-2 bg-gradient-to-b ${day.color}`}></div>
                 <div className="flex-1 p-6 md:p-8">
