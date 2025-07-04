@@ -18,51 +18,7 @@
   </head>
 
   <body>
-    <div id="blur-overlay"></div>
     <div id="root"></div>
-    <style>
-#blur-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  backdrop-filter: blur(6px);
-  opacity: 0;
-  transition: opacity 0.15s ease;
-  z-index: 9999;
-}
-    </style>
-    <script>
-const blurOverlay = document.getElementById('blur-overlay');
-let lastScrollY = window.scrollY;
-let scrollTimeout;
-
-// Scroll motion blur
-window.addEventListener('scroll', () => {
-  const speed = Math.abs(window.scrollY - lastScrollY);
-  lastScrollY = window.scrollY;
-
-  if (speed > 3) {
-    blurOverlay.style.opacity = '0.25';
-    clearTimeout(scrollTimeout);
-    scrollTimeout = setTimeout(() => {
-      blurOverlay.style.opacity = '0';
-    }, 100);
-  }
-});
-
-// Click blur flash
-document.addEventListener('click', (e) => {
-  if (e.target.tagName === 'BUTTON' || e.target.closest('button')) {
-    blurOverlay.style.opacity = '0.4';
-    setTimeout(() => {
-      blurOverlay.style.opacity = '0';
-    }, 100);
-  }
-});
-    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
