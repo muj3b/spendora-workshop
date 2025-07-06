@@ -42,6 +42,9 @@ const Hero = () => {
               July 6th - 10th, 2025
             </h2>
             <p className="text-lg sm:text-xl text-white/90 mb-2">
+              🕐 2-4 PM Central Daylight Time
+            </p>
+            <p className="text-lg sm:text-xl text-white/90 mb-2">
               📍 R.H. Stafford Library
             </p>
             <p className="text-sm sm:text-base text-white/80">
