@@ -1,4 +1,5 @@
 
+import { GradientButton } from "@/components/ui/gradient-button";
 import { Card } from "@/components/ui/card";
 
 const WorkshopSchedule = () => {
@@ -41,44 +42,44 @@ const WorkshopSchedule = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
+    <section className="py-20 bg-muted/30 transition-colors duration-300" aria-labelledby="workshop-schedule">
       <div className="container mx-auto px-6">
-        <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-            5-Day Workshop <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Schedule</span>
+        <header className="max-w-4xl mx-auto text-center mb-16">
+          <h2 id="workshop-schedule" className="text-display text-foreground mb-6">
+            5-Day Workshop <span className="gradient-text-primary">Schedule</span>
           </h2>
-          <p className="text-xl text-gray-700 dark:text-gray-300 mb-4">
+          <p className="text-body-large text-muted-foreground mb-4">
             Each day builds on the last, creating a comprehensive foundation in financial literacy
           </p>
-          <div className="bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-lg p-4 mb-8 animate-fade-in">
+          <div className="glass border-blue-200 dark:border-blue-700 rounded-lg p-4 mb-8 animate-fade-in" role="note" aria-label="Important schedule information">
             <p className="text-blue-800 dark:text-blue-200 font-medium">
-              📅 Specific dates, times, and locations will be sent to you via your contact information some time after you sign up!
+              <span role="img" aria-label="Calendar">📅</span> Specific dates, times, and locations will be sent to you via your contact information some time after you sign up!
             </p>
           </div>
-        </div>
+        </header>
 
-        <div className="space-y-6 max-w-4xl mx-auto">
+        <div className="space-y-6 max-w-4xl mx-auto" role="list" aria-label="Daily workshop schedule">
           {schedule.map((day, index) => (
-            <Card key={index} className="overflow-hidden hover:shadow-lg dark:bg-gray-700 dark:border-gray-600 transition-all duration-300 transform hover:-translate-y-1 animate-dynamic-island-pop" style={{ animationDelay: `${index * 0.1}s` }}>
+            <Card key={index} className="overflow-hidden hover:shadow-large transition-all duration-300 transform hover:-translate-y-1 animate-dynamic-island-pop shadow-soft" style={{ animationDelay: `${index * 0.1}s` }} role="listitem">
               <div className="flex">
-                <div className={`w-2 bg-gradient-to-b ${day.color}`}></div>
+                <div className={`w-2 bg-gradient-to-b ${day.color}`} aria-hidden="true"></div>
                 <div className="flex-1 p-6 md:p-8">
                   <div className="flex flex-col">
-                    <div className="flex items-center mb-4">
+                    <header className="flex items-center mb-4">
                       <span className={`inline-block px-3 py-1 rounded-full text-white text-sm font-semibold bg-gradient-to-r ${day.color} mr-4`}>
                         {day.day}
                       </span>
-                      <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white">
+                      <h3 className="text-subheading text-card-foreground">
                         {day.title}
                       </h3>
-                    </div>
-                    <p className="text-gray-600 dark:text-gray-300 text-lg mb-4">
+                    </header>
+                    <p className="text-body text-muted-foreground mb-4">
                       {day.description}
                     </p>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-3" role="list" aria-label={`${day.day} activities`}>
                       {day.activities.map((activity, actIndex) => (
-                        <div key={actIndex} className="bg-gray-50 dark:bg-gray-600 rounded-lg p-3 text-sm text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gray-500 hover:bg-gray-100 dark:hover:bg-gray-500 transition-colors duration-200">
-                          • {activity}
+                        <div key={actIndex} className="glass rounded-lg p-3 text-sm text-card-foreground hover:glass-strong transition-colors duration-200" role="listitem">
+                          <span aria-hidden="true">•</span> {activity}
                         </div>
                       ))}
                     </div>
@@ -89,17 +90,20 @@ const WorkshopSchedule = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
+        <footer className="text-center mt-12">
+          <p className="text-body-large text-muted-foreground mb-4">
             Ready to transform your relationship with money?
           </p>
-          <button 
+          <GradientButton 
+            size="lg"
+            variant="primary"
             onClick={() => window.open('https://forms.gle/JWCVyGcfN5UKiwqHA', '_blank')}
-            className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white text-lg px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+            aria-label="Reserve your spot in the Spendora workshop"
+            className="rounded-full"
           >
             Reserve Your Spot Now
-          </button>
-        </div>
+          </GradientButton>
+        </footer>
       </div>
     </section>
   );

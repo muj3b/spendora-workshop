@@ -18,6 +18,9 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'inter': ['Inter', 'system-ui', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -62,6 +65,18 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				}
+			},
+			backgroundImage: {
+				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-secondary': 'var(--gradient-secondary)',
+				'gradient-accent': 'var(--gradient-accent)',
+				'gradient-warm': 'var(--gradient-warm)',
+			},
+			boxShadow: {
+				'soft': 'var(--shadow-soft)',
+				'medium': 'var(--shadow-medium)',
+				'large': 'var(--shadow-large)',
+				'glow': 'var(--shadow-glow)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -169,6 +184,16 @@ export default {
 					'50%': {
 						boxShadow: '0 0 0 8px rgba(59, 130, 246, 0)'
 					}
+				},
+				'slide-up': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(30px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
 				}
 			},
 			animation: {
@@ -180,7 +205,8 @@ export default {
 				'dynamic-island-pop': 'dynamic-island-pop 0.8s cubic-bezier(0.25, 0.8, 0.25, 1) forwards',
 				'dynamic-island-scale': 'dynamic-island-scale 1s cubic-bezier(0.25, 0.8, 0.25, 1) forwards',
 				'pulse-slow': 'gentle-pulse 4s ease-in-out infinite',
-				'smooth-fade-in': 'smooth-fade-in 0.6s ease-out forwards'
+				'smooth-fade-in': 'smooth-fade-in 0.6s ease-out forwards',
+				'slide-up': 'slide-up 0.6s ease-out forwards'
 			}
 		}
 	},
