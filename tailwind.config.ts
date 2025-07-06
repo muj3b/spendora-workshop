@@ -124,46 +124,50 @@ export default {
 				'dynamic-island-pop': {
 					'0%': {
 						opacity: '0',
-						transform: 'scale(0.7) translateY(30px)',
-						filter: 'blur(10px)'
+						transform: 'scale(0.8) translateY(15px)'
 					},
-					'50%': {
-						opacity: '0.8',
-						transform: 'scale(1.05) translateY(-5px)',
-						filter: 'blur(2px)'
+					'60%': {
+						opacity: '0.9',
+						transform: 'scale(1.02) translateY(-2px)'
 					},
 					'100%': {
 						opacity: '1',
-						transform: 'scale(1) translateY(0)',
-						filter: 'blur(0px)'
+						transform: 'scale(1) translateY(0)'
 					}
 				},
 				'dynamic-island-scale': {
 					'0%': {
 						opacity: '0',
-						transform: 'scale(0.3)',
-						filter: 'blur(8px)',
-						borderRadius: '50px'
+						transform: 'scale(0.6)',
+						borderRadius: '32px'
 					},
-					'60%': {
-						opacity: '0.9',
-						transform: 'scale(1.1)',
-						filter: 'blur(1px)',
-						borderRadius: '30px'
+					'70%': {
+						opacity: '0.95',
+						transform: 'scale(1.03)',
+						borderRadius: '26px'
 					},
 					'100%': {
 						opacity: '1',
 						transform: 'scale(1)',
-						filter: 'blur(0px)',
 						borderRadius: '24px'
 					}
 				},
-				'pulse-slow': {
+				'smooth-fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(12px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'gentle-pulse': {
 					'0%, 100%': {
-						boxShadow: '0 0 0 0 rgba(59, 130, 246, 0.4)'
+						boxShadow: '0 0 0 0 rgba(59, 130, 246, 0.3)'
 					},
 					'50%': {
-						boxShadow: '0 0 0 10px rgba(59, 130, 246, 0)'
+						boxShadow: '0 0 0 8px rgba(59, 130, 246, 0)'
 					}
 				}
 			},
@@ -173,9 +177,10 @@ export default {
 				'fade-in': 'fade-in 0.8s ease-out forwards',
 				'float': 'float 6s ease-in-out infinite',
 				'letter-shine': 'letter-shine 8s ease-in-out infinite',
-				'dynamic-island-pop': 'dynamic-island-pop 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards',
-				'dynamic-island-scale': 'dynamic-island-scale 1.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards',
-				'pulse-slow': 'pulse-slow 6s ease-in-out infinite'
+				'dynamic-island-pop': 'dynamic-island-pop 0.8s cubic-bezier(0.25, 0.8, 0.25, 1) forwards',
+				'dynamic-island-scale': 'dynamic-island-scale 1s cubic-bezier(0.25, 0.8, 0.25, 1) forwards',
+				'pulse-slow': 'gentle-pulse 4s ease-in-out infinite',
+				'smooth-fade-in': 'smooth-fade-in 0.6s ease-out forwards'
 			}
 		}
 	},
