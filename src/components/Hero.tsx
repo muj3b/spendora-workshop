@@ -137,7 +137,13 @@ const Hero = () => {
               iconSize="lg"
               variant="glass"
               animationDelay="1.9s"
-              badge={<span className="text-sm text-muted-foreground">Coming Soon</span>}
+              onCardClick={() => navigate('/crypto-nfts')}
+              badge={
+                <div className="flex items-center space-x-1 text-sm text-orange-600 dark:text-orange-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors">
+                  <span>Click me</span>
+                  <ArrowRight className="w-4 h-4 animate-pulse" />
+                </div>
+              }
             />
           </section>
         </div>

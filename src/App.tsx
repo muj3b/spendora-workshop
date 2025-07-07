@@ -9,6 +9,7 @@ import ThemeToggle from "@/components/ThemeToggle";
 
 import Index from "./pages/Index";
 import StockMarkets from "./pages/StockMarkets";
+import CryptoNFTs from "./pages/CryptoNFTs";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +26,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/stock-markets" element={<StockMarkets />} />
+            <Route path="/crypto-nfts" element={<CryptoNFTs />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
