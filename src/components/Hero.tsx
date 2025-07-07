@@ -39,41 +39,56 @@ const Hero = () => {
             real-world financial skills to students grades 5-10.
           </p>
 
-          <section className="bg-gradient-primary rounded-3xl p-6 sm:p-8 mx-auto max-w-2xl mb-8 sm:mb-10 animate-dynamic-island-scale glass-strong shadow-large" style={{ animationDelay: '0.9s' }} aria-labelledby="workshop-details">
-            <LiveEventTimer 
-              isActive={false} 
-              eventStartDateTime="2025-07-06T14:00:00"
-              eventDurationHours={2}
-              totalEventDays={5}
-            />
-            <p className="text-body-large text-white/90 mb-2">
-              <span role="img" aria-label="Location">📍</span> R.H. Stafford Library
-            </p>
-            <p className="text-body text-white/80">
-              Free • All supplies included
-            </p>
-          </section>
+          {/* Main Call-to-Action Section */}
+          <div className="space-y-6 animate-smooth-fade-in transform transition-all duration-1000" style={{ animationDelay: '0.9s' }}>
+            {/* Hero CTA Button */}
+            <div className="text-center">
+              <GradientButton 
+                size="xl" 
+                variant="secondary" 
+                pulse={true}
+                className="w-full sm:w-auto rounded-full text-xl px-12 py-6 hover:scale-110 transition-all duration-300 shadow-glow"
+                onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSc96cCWzGieYsW8-O71obKoyoV3yF8YTE1Msay3ZwoeWgydBg/viewform', '_blank')}
+                aria-label="Tell us what days work for you"
+              >
+                <span className="font-bold">Help Us Pick The Perfect Dates!</span> <span role="img" aria-label="Calendar">📅</span>
+              </GradientButton>
+              <p className="text-muted-foreground mt-3 text-lg">
+                Vote for your preferred workshop dates 👆
+              </p>
+            </div>
 
-          <div className="space-y-4 animate-smooth-fade-in transform transition-all duration-1000" style={{ animationDelay: '1.1s' }}>
-            <GradientButton 
-              size="xl" 
-              variant="secondary" 
-              className="w-full sm:w-auto rounded-full mb-3"
-              onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSc96cCWzGieYsW8-O71obKoyoV3yF8YTE1Msay3ZwoeWgydBg/viewform', '_blank')}
-              aria-label="Tell us what days work for you"
-            >
-              What Days Work For You? <span role="img" aria-label="Calendar">📅</span>
-            </GradientButton>
-            <GradientButton 
-              size="lg" 
-              variant="primary"
-              pulse={true}
-              className="w-full sm:w-auto rounded-full"
-              onClick={() => window.open('https://forms.gle/JWCVyGcfN5UKiwqHA', '_blank')}
-              aria-label="Sign up for the free Spendora workshop"
-            >
-              Sign Up Now - It's Free! <span role="img" aria-label="Rocket">🚀</span>
-            </GradientButton>
+            {/* Secondary info card */}
+            <div className="bg-gradient-primary/10 dark:bg-gradient-primary/5 rounded-2xl p-4 sm:p-6 mx-auto max-w-lg backdrop-blur-sm border border-primary/20">
+              <LiveEventTimer 
+                isActive={false} 
+                eventStartDateTime="2025-07-06T14:00:00"
+                eventDurationHours={2}
+                totalEventDays={5}
+                className="mb-3"
+              />
+              <div className="text-center space-y-2">
+                <p className="text-body text-muted-foreground">
+                  <span role="img" aria-label="Location">📍</span> R.H. Stafford Library
+                </p>
+                <p className="text-body text-muted-foreground">
+                  <span role="img" aria-label="Money">💰</span> Free • All supplies included
+                </p>
+              </div>
+            </div>
+
+            {/* Secondary signup button */}
+            <div className="text-center">
+              <GradientButton 
+                size="lg" 
+                variant="primary"
+                className="w-full sm:w-auto rounded-full"
+                onClick={() => window.open('https://forms.gle/JWCVyGcfN5UKiwqHA', '_blank')}
+                aria-label="Sign up for the free Spendora workshop"
+              >
+                Reserve Your Spot - It's Free! <span role="img" aria-label="Rocket">🚀</span>
+              </GradientButton>
+            </div>
           </div>
 
           <section className="mt-8 sm:mt-12 md:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 max-w-5xl mx-auto px-2" aria-labelledby="workshop-topics">
