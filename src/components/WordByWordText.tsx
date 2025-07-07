@@ -11,19 +11,19 @@ interface WordByWordTextProps {
 const WordByWordText: React.FC<WordByWordTextProps> = ({ 
   text, 
   className = '', 
-  delay = 500,
-  wordDelay = 120
+  delay = 100,
+  wordDelay = 30
 }) => {
-  const [visibleWords, setVisibleWords] = useState(0);
+  const [visibleParagraphs, setVisibleParagraphs] = useState(0);
   
-  // Split text into words, preserving paragraph structure
-  const words = text.split(/\s+/);
+  // Split text into paragraphs, preserving original structure
+  const paragraphs = text.split('\n\n').filter(p => p.trim());
 
   useEffect(() => {
     const startTimer = setTimeout(() => {
       const interval = setInterval(() => {
-        setVisibleWords((prev) => {
-          if (prev >= words.length) {
+        setVisibleParagraphs((prev) => {
+          if (prev >= paragraphs.length) {
             clearInterval(interval);
             return prev;
           }
@@ -35,27 +35,21 @@ const WordByWordText: React.FC<WordByWordTextProps> = ({
     }, delay);
 
     return () => clearTimeout(startTimer);
-  }, [words.length, delay, wordDelay]);
+  }, [paragraphs.length, delay, wordDelay]);
 
   return (
     <div className={className}>
-      {words.map((word, index) => (
-        <React.Fragment key={index}>
-          <span
-            className={`inline-block transition-all duration-200 mr-1 ${
-              index < visibleWords 
-                ? 'opacity-100 transform translate-y-0' 
-                : 'opacity-0 transform translate-y-1'
-            } ${
-              index === visibleWords - 1 && visibleWords < words.length
-                ? 'glare-slide'
-                : ''
-            }`}
-          >
-            {word}
-          </span>
-          {word.endsWith('.') && index < words.length - 1 && <br />}
-        </React.Fragment>
+      {paragraphs.map((paragraph, index) => (
+        <p
+          key={index}
+          className={`mb-4 transition-all duration-500 ${
+            index < visibleParagraphs 
+              ? 'opacity-100 transform translate-y-0' 
+              : 'opacity-0 transform translate-y-4'
+          }`}
+        >
+          {paragraph}
+        </p>
       ))}
     </div>
   );

@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import PageTransition from "@/components/PageTransition";
 import WordByWordText from "@/components/WordByWordText";
+import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "@/components/ui/resizable";
 
 const CryptoNFTs = () => {
   const navigate = useNavigate();
@@ -38,29 +39,31 @@ In present day crypto is gaining more credibility with many banks, companies, an
               Crypto + NFTs
             </h1>
 
-            {/* Split Layout */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+            {/* Resizable Split Layout */}
+            <ResizablePanelGroup direction="horizontal" className="min-h-[600px] rounded-lg border">
               {/* Left Side - What is Crypto */}
-              <div className="space-y-6">
-                <div className="bg-gradient-to-r from-orange-50 to-orange-100 dark:from-orange-900/20 dark:to-orange-800/20 rounded-lg p-8">
+              <ResizablePanel defaultSize={60} minSize={30}>
+                <div className="h-full p-8 bg-gradient-to-r from-orange-50 to-orange-100 dark:from-orange-900/20 dark:to-orange-800/20">
                   <h2 className="text-3xl font-bold text-orange-800 dark:text-orange-200 mb-6">
                     What is Crypto?
                   </h2>
                   
-                  <div className="prose prose-lg max-w-none dark:prose-invert">
+                  <div className="prose prose-lg max-w-none dark:prose-invert overflow-y-auto max-h-[500px]">
                     <WordByWordText 
                       text={cryptoText}
                       className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed"
-                      delay={300}
-                      wordDelay={120}
+                      delay={100}
+                      wordDelay={200}
                     />
                   </div>
                 </div>
-              </div>
-
+              </ResizablePanel>
+              
+              <ResizableHandle withHandle />
+              
               {/* Right Side - NFTs */}
-              <div className="space-y-6">
-                <div className="bg-gradient-to-r from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 rounded-lg p-8 h-full flex items-center justify-center">
+              <ResizablePanel defaultSize={40} minSize={30}>
+                <div className="h-full p-8 bg-gradient-to-r from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 flex items-center justify-center">
                   <div className="text-center">
                     <h2 className="text-3xl font-bold text-purple-800 dark:text-purple-200 mb-6">
                       NFTs
@@ -76,8 +79,8 @@ In present day crypto is gaining more credibility with many banks, companies, an
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              </ResizablePanel>
+            </ResizablePanelGroup>
           </div>
         </div>
       </div>
