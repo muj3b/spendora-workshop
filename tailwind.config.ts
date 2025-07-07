@@ -194,6 +194,17 @@ export default {
 						opacity: '1',
 						transform: 'translateY(0)'
 					}
+				},
+				'flash': {
+					'0%': { 
+						backgroundColor: 'hsl(var(--primary))'
+					},
+					'50%': { 
+						backgroundColor: 'hsl(var(--destructive))'
+					},
+					'100%': { 
+						backgroundColor: 'hsl(var(--primary))'
+					}
 				}
 			},
 			animation: {
@@ -206,7 +217,8 @@ export default {
 				'dynamic-island-scale': 'dynamic-island-scale 1s cubic-bezier(0.25, 0.8, 0.25, 1) forwards',
 				'pulse-slow': 'gentle-pulse 4s ease-in-out infinite',
 				'smooth-fade-in': 'smooth-fade-in 0.6s ease-out forwards',
-				'slide-up': 'slide-up 0.6s ease-out forwards'
+				'slide-up': 'slide-up 0.6s ease-out forwards',
+				'flash': 'flash 1s ease-in-out infinite alternate'
 			}
 		}
 	},

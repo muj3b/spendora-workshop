@@ -3,6 +3,7 @@ import { GradientButton } from "@/components/ui/gradient-button";
 import { FeatureCard } from "@/components/ui/feature-card";
 import { ChartLine, Store, ArrowRight, Coins, Bitcoin } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import LiveEventTimer from "@/components/LiveEventTimer";
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -39,12 +40,12 @@ const Hero = () => {
           </p>
 
           <section className="bg-gradient-primary rounded-3xl p-6 sm:p-8 mx-auto max-w-2xl mb-8 sm:mb-10 animate-dynamic-island-scale glass-strong shadow-large" style={{ animationDelay: '0.9s' }} aria-labelledby="workshop-details">
-            <h2 id="workshop-details" className="text-heading text-white mb-3">
-              July 6th - 10th, 2025
-            </h2>
-            <p className="text-body-large text-white/90 mb-2">
-              <span role="img" aria-label="Clock">🕐</span> 2-4 PM Central Daylight Time
-            </p>
+            <LiveEventTimer 
+              isActive={false} 
+              eventStartDateTime="2025-07-06T14:00:00"
+              eventDurationHours={2}
+              totalEventDays={5}
+            />
             <p className="text-body-large text-white/90 mb-2">
               <span role="img" aria-label="Location">📍</span> R.H. Stafford Library
             </p>
@@ -56,6 +57,15 @@ const Hero = () => {
           <div className="space-y-4 animate-smooth-fade-in transform transition-all duration-1000" style={{ animationDelay: '1.1s' }}>
             <GradientButton 
               size="xl" 
+              variant="secondary" 
+              className="w-full sm:w-auto rounded-full mb-3"
+              onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSc96cCWzGieYsW8-O71obKoyoV3yF8YTE1Msay3ZwoeWgydBg/viewform', '_blank')}
+              aria-label="Tell us what days work for you"
+            >
+              What Days Work For You? <span role="img" aria-label="Calendar">📅</span>
+            </GradientButton>
+            <GradientButton 
+              size="lg" 
               variant="primary"
               pulse={true}
               className="w-full sm:w-auto rounded-full"
