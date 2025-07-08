@@ -91,7 +91,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <section className="mt-8 sm:mt-12 md:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 max-w-5xl mx-auto px-2" aria-labelledby="workshop-topics">
+          <section id="features" className="mt-8 sm:mt-12 md:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 max-w-5xl mx-auto px-2" aria-labelledby="workshop-topics">
             <h2 id="workshop-topics" className="sr-only">Workshop Topics</h2>
             <FeatureCard
               icon={ChartLine}
