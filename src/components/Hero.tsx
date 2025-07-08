@@ -30,19 +30,19 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="relative text-display mb-6 sm:mb-8 animate-smooth-fade-in transform transition-all duration-1000" style={{ animationDelay: '0.5s' }}>
+          <h1 className="relative text-display mb-6 sm:mb-8 animate-smooth-fade-in transform transition-all duration-1000 animate-[fade-in_1s_ease-out]" style={{ animationDelay: '0.2s' }}>
             <span className="relative inline-block gradient-text-primary">
               <span className="animate-letter-shine">Level Up Your Money Skills</span>
             </span>
           </h1>
           
-          <p className="text-body-large text-muted-foreground mb-6 sm:mb-8 max-w-3xl mx-auto animate-smooth-fade-in transform transition-all duration-1000" style={{ animationDelay: '0.7s' }}>
+          <p className="text-body-large text-muted-foreground mb-6 sm:mb-8 max-w-3xl mx-auto animate-smooth-fade-in transform transition-all duration-1000 animate-[fade-in_1s_ease-out_0.4s_both]">
             A free workshop designed by high school students to teach 
             real-world financial skills to students.
           </p>
 
           {/* Main Call-to-Action Section */}
-          <div className="space-y-6 animate-smooth-fade-in transform transition-all duration-1000" style={{ animationDelay: '0.9s' }}>
+          <div className="space-y-6 animate-smooth-fade-in transform transition-all duration-1000 animate-[fade-in_1s_ease-out_0.6s_both]">
             {/* Hero CTA Button */}
             <div className="text-center">
               <GradientButton 
@@ -93,7 +93,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <section id="features" className="mt-8 sm:mt-12 md:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 max-w-5xl mx-auto px-2" aria-labelledby="workshop-topics">
+          <section id="features" className="mt-8 sm:mt-12 md:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 max-w-5xl mx-auto px-2 animate-[fade-in_1s_ease-out_0.8s_both]" aria-labelledby="workshop-topics">
             <h2 id="workshop-topics" className="sr-only">Workshop Topics</h2>
             <FeatureCard
               icon={ChartLine}
