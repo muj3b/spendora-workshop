@@ -4,12 +4,14 @@ import { FeatureCard } from "@/components/ui/feature-card";
 import { ChartLine, Store, ArrowRight, Coins, Bitcoin } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import LiveEventTimer from "@/components/LiveEventTimer";
+import HamburgerMenu from "@/components/HamburgerMenu";
 
 const Hero = () => {
   const navigate = useNavigate();
 
   return (
     <main className="relative min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 flex items-center overflow-hidden transition-colors duration-300" role="main" aria-label="Spendora Workshop Hero Section">
+      <HamburgerMenu />
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 opacity-10 animate-[float_6s_ease-in-out_infinite]">

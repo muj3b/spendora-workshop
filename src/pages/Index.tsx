@@ -4,11 +4,9 @@ import WorkshopSchedule from "@/components/WorkshopSchedule";
 import MeetTheTeam from "@/components/MeetTheTeam";
 import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
-import ScrollNavigator from "@/components/ScrollNavigator";
-
 const Index = () => {
   return (
-    <PageTransition transitionType="fade">
+    <PageTransition transitionType="welcome">
       <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
         <Hero />
         <div id="about-spendora">
@@ -21,7 +19,6 @@ const Index = () => {
           <MeetTheTeam />
         </div>
         <Footer />
-        <ScrollNavigator />
       </div>
     </PageTransition>
   );
